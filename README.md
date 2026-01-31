@@ -1,6 +1,6 @@
 # Paper Trader
 
-A paper trading web application that allows users to simulate stock trades and track portfolio performance
+*A web application that allows users to simulate stock trades and track portfolio performance*
 
 ## Tech Stack
 - Python backend

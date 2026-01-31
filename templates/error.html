@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}Error{% endblock %}
+
+{% block main %}
+    <div class="container text-center" style="max-width: 720px;">
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">Error</h4>
+            <p>{{ message }}</p>
+        </div>
+    </div>
+{% endblock %}

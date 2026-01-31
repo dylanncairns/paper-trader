@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">TOTAL</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- For each stock owned loop making <tr> with <td> for each-->
+            {% for stock in owned %}
+                <tr>
+                    <td class="text-start">{{ stock.stocksymbol }}</td>
+                    <td class="text-end">{{ stock.numshares }} </td>
+                    <td class="text-end">{{ stock.currentprice | usd }}</td>
+                    <td class="text-end">{{ stock.value | usd }}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="3">Cash</td>
+                <td class="border-0 text-end" colspan="3">{{ cash | usd}}</td>
+            </tr>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="3">TOTAL</td>
+                <td class="border-0 text-end" colspan="3">{{ total | usd}}</td>
+            </tr>
+
+        </tfoot>
+    </table>
+{% endblock %}
+

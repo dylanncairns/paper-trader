@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">Transacted</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- For each stock owned loop making <tr> with <td> for each-->
+            {% for stock in history %}
+                <tr>
+                    <td class="text-start">{{ stock.stocksymbol }}</td>
+                    <td class="text-end">{{ stock.numshares }} </td>
+                    <td class="text-end">{{ stock.price | usd }}</td>
+                    <td class="text-end">{{ stock.time }}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}
+

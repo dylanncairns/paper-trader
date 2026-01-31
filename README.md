@@ -1,4 +1,4 @@
-# Paper Trading / Portfolio Simulation
+# Paper Trader
 
 A paper trading web application that allows users to simulate stock trades and track portfolio performance
 
@@ -12,5 +12,5 @@ A paper trading web application that allows users to simulate stock trades and t
 ## Features
 - User registration, login/logout, authentication
 - Buy and sell simulated equities using accurate market pricing
-- Portfolio transaction history
+- Portfolio transaction history and accurate performance simulation
 - Live price quotes
